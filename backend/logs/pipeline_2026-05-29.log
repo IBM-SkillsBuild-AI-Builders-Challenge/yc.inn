@@ -1,0 +1,14 @@
+2026-05-29 21:16:45.476 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=3, edges=2
+2026-05-29 21:16:45.477 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 3 nodes, 2 edges
+2026-05-29 21:16:45.478 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 3 nodes, 2 edges, is_dag=True
+2026-05-29 21:16:45.483 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=3, edges=3
+2026-05-29 21:16:45.484 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 3 nodes, 3 edges
+2026-05-29 21:16:45.484 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 3 nodes, 3 edges, is_dag=False
+2026-05-29 21:16:45.484 | WARNING  | app.services.pipeline_service:parse:32 - Pipeline contains cycles — not a valid DAG
+2026-05-29 21:24:22.389 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=2, edges=1
+2026-05-29 21:24:22.391 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 2 nodes, 1 edges
+2026-05-29 21:24:22.396 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 2 nodes, 1 edges, is_dag=True
+2026-05-29 21:24:22.407 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=2, edges=2
+2026-05-29 21:24:22.407 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 2 nodes, 2 edges
+2026-05-29 21:24:22.408 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 2 nodes, 2 edges, is_dag=False
+2026-05-29 21:24:22.408 | WARNING  | app.services.pipeline_service:parse:32 - Pipeline contains cycles — not a valid DAG

@@ -1,0 +1,14 @@
+{
+  "name": "pipeline-builder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently -n backend,frontend -c cyan,magenta \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && python -m uvicorn app.main:app --reload --port 8000",
+    "frontend": "cd frontend && npm start",
+    "install:all": "npm install && cd frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
