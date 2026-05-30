@@ -1,0 +1,32 @@
+2026-05-30 09:00:38.703 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=9, edges=9
+2026-05-30 09:00:38.742 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 9 nodes, 9 edges
+2026-05-30 09:00:38.748 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 9 nodes, 9 edges, is_dag=True
+2026-05-30 09:15:46.882 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:16:15.280 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:18:36.700 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:19:51.061 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:20:58.048 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:21:29.806 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:24:24.243 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:24:34.803 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:24:55.882 | INFO     | app.api.routes.email:send_email:33 - Email send requested to notshubham11@gmail.com
+2026-05-30 09:25:10.951 | ERROR    | app.api.routes.email:send_email:67 - Email send failed: timed out
+2026-05-30 09:25:53.840 | INFO     | app.api.routes.email:send_email:33 - Email send requested to shubhamkambli807@gmail.com
+2026-05-30 09:26:08.913 | ERROR    | app.api.routes.email:send_email:67 - Email send failed: timed out
+2026-05-30 09:26:16.808 | INFO     | app.api.routes.email:send_email:33 - Email send requested to shubhamkambli807@gmail.com
+2026-05-30 09:27:37.414 | INFO     | app.api.routes.email:send_email:33 - Email send requested to shubhamkambli807@gmail.com
+2026-05-30 09:28:21.565 | INFO     | app.api.routes.email:send_email:33 - Email send requested to shubhamkambli807@gmail.com
+2026-05-30 09:28:43.440 | INFO     | app.api.routes.email:send_email:33 - Email send requested to shubhamkambli807@gmail.com
+2026-05-30 09:29:41.862 | INFO     | app.api.routes.email:send_email:42 - Email send requested to shubhamkambli807@gmail.com
+2026-05-30 09:29:43.422 | WARNING  | app.api.routes.email:send_email:73 - SMTP response code 553: b"Envelope FROM 'notshubham11@gmail.com' email address not allowed."
+2026-05-30 09:31:57.325 | INFO     | app.api.routes.email:send_email:42 - Email send requested to shubhamkambli807@gmail.com
+2026-05-30 09:31:58.881 | WARNING  | app.api.routes.email:send_email:73 - SMTP response code 553: b"Envelope FROM 'cs24f020@ybit.ac.in' email address not allowed."
+2026-05-30 11:24:59.362 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=4, edges=3
+2026-05-30 11:24:59.368 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 4 nodes, 3 edges
+2026-05-30 11:24:59.377 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 4 nodes, 3 edges, is_dag=True
+2026-05-30 11:28:51.435 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=4, edges=3
+2026-05-30 11:28:51.435 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 4 nodes, 3 edges
+2026-05-30 11:28:51.438 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 4 nodes, 3 edges, is_dag=True
+2026-05-30 11:29:17.453 | DEBUG    | app.api.routes.pipeline:parse_pipeline:14 - POST /pipelines/parse — nodes=4, edges=4
+2026-05-30 11:29:17.454 | INFO     | app.services.pipeline_service:parse:15 - Parsing pipeline: 4 nodes, 4 edges
+2026-05-30 11:29:17.455 | INFO     | app.services.pipeline_service:parse:29 - Pipeline parsed: 4 nodes, 3 edges, is_dag=True

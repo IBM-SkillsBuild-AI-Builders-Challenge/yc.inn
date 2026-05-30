@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     app_debug: bool = True
     api_prefix: str = "/api/v1"
     log_level: str = "INFO"
+    groq_api_key: str = ""
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 
