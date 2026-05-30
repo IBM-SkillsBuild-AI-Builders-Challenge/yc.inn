@@ -1,0 +1,7 @@
+.react-flow__node:hover {
+  z-index: 10;
+}
+
+.react-flow__node.selected {
+  z-index: 20;
+}
