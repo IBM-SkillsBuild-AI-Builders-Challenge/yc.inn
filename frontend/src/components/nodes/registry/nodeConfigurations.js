@@ -1,4 +1,8 @@
-import { FileInput, FileOutput, Globe, Database, GitBranch, Clock, Bell } from "lucide-react";
+import {
+  FileInput, FileOutput, Globe, Database, GitBranch, Clock, Bell,
+  Play, Activity, Upload, Filter, BarChart3, TrendingUp,
+  UserCheck, Wrench, Package, ShoppingCart, Search,
+} from "lucide-react";
 import { createNode } from "./createNode";
 
 export const nodeConfigurations = {
@@ -108,6 +112,105 @@ export const nodeConfigurations = {
       { name: "recipient", label: "Recipient", type: "text", placeholder: "email or webhook URL" },
       { name: "subject", label: "Subject", type: "text", placeholder: "notification subject" },
       { name: "message", label: "Message", type: "textarea", placeholder: "notification body", rows: 2 },
+    ],
+  }),
+
+  workflowTrigger: createNode({
+    title: "Workflow Trigger", icon: Play,
+    inputs: [], outputs: [{ id: "trigger" }],
+    fields: [{ name: "triggerName", label: "Name", type: "text", placeholder: "workflow trigger" }],
+  }),
+
+  sensorInput: createNode({
+    title: "Sensor Input", icon: Activity,
+    inputs: [{ id: "trigger" }], outputs: [{ id: "data" }],
+    fields: [
+      { name: "machineId", label: "Machine ID", type: "text", placeholder: "CNC-12" },
+      { name: "sensorType", label: "Sensor Type", type: "select", options: [
+        { label: "Temperature", value: "temperature" },
+        { label: "Vibration", value: "vibration" },
+        { label: "Pressure", value: "pressure" },
+        { label: "Multi", value: "multi" },
+      ]},
+      { name: "interval", label: "Poll Interval (s)", type: "number", min: 1, default: 5 },
+    ],
+  }),
+
+  csvUpload: createNode({
+    title: "CSV Upload", icon: Upload,
+    inputs: [{ id: "trigger" }], outputs: [{ id: "data" }],
+    fields: [
+      { name: "filePath", label: "File Path", type: "text", placeholder: "data/machine_logs.csv" },
+      { name: "delimiter", label: "Delimiter", type: "text", placeholder: "," },
+    ],
+  }),
+
+  dataCleaning: createNode({
+    title: "Data Cleaning", icon: Filter,
+    inputs: [{ id: "input" }], outputs: [{ id: "output" }],
+    fields: [
+      { name: "method", label: "Method", type: "select", options: [
+        { label: "Remove Outliers", value: "outliers" },
+        { label: "Normalize", value: "normalize" },
+        { label: "Smooth", value: "smooth" },
+      ]},
+      { name: "threshold", label: "Threshold", type: "number", min: 0, default: 3 },
+    ],
+  }),
+
+  featureExtraction: createNode({
+    title: "Feature Extraction", icon: BarChart3,
+    inputs: [{ id: "input" }], outputs: [{ id: "features" }],
+    fields: [
+      { name: "features", label: "Features", type: "select", options: [
+        { label: "RMS", value: "rms" },
+        { label: "Peak Frequency", value: "peak_freq" },
+        { label: "Trend", value: "trend" },
+        { label: "All", value: "all" },
+      ]},
+    ],
+  }),
+
+  humanApproval: createNode({
+    title: "Human Approval", icon: UserCheck,
+    inputs: [{ id: "input" }], outputs: [{ id: "approved" }, { id: "rejected" }],
+    fields: [
+      { name: "assignee", label: "Assignee", type: "text", placeholder: "technician@factory.com" },
+      { name: "message", label: "Approval Message", type: "textarea", placeholder: "Please approve maintenance action...", rows: 2 },
+    ],
+  }),
+
+  maintenanceTicket: createNode({
+    title: "Maintenance Ticket", icon: Wrench,
+    inputs: [{ id: "input" }], outputs: [{ id: "ticket" }],
+    fields: [
+      { name: "priority", label: "Priority", type: "select", options: [
+        { label: "Low", value: "low" }, { label: "Medium", value: "medium" }, { label: "High", value: "high" }, { label: "Critical", value: "critical" },
+      ]},
+      { name: "category", label: "Category", type: "select", options: [
+        { label: "Predictive", value: "predictive" }, { label: "Preventive", value: "preventive" }, { label: "Corrective", value: "corrective" },
+      ]},
+      { name: "description", label: "Description", type: "textarea", placeholder: "Issue description", rows: 2 },
+    ],
+  }),
+
+  inventoryCheck: createNode({
+    title: "Inventory Check", icon: Package,
+    inputs: [{ id: "input" }], outputs: [{ id: "result" }],
+    fields: [
+      { name: "partNumber", label: "Part Number", type: "text", placeholder: "BRG-6205" },
+      { name: "minStock", label: "Min Stock", type: "number", min: 0, default: 2 },
+    ],
+  }),
+
+  procurementAgent: createNode({
+    title: "Procurement Agent", icon: ShoppingCart,
+    inputs: [{ id: "input" }], outputs: [{ id: "order" }],
+    fields: [
+      { name: "vendor", label: "Preferred Vendor", type: "text", placeholder: "Industrial Supplies Co." },
+      { name: "autoOrder", label: "Auto-Order", type: "select", options: [
+        { label: "Yes", value: "yes" }, { label: "Ask First", value: "ask" },
+      ]},
     ],
   }),
 };
