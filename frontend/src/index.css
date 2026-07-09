@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-canvas: #FBF9F4;
-  --bg-card: #FFFFFF;
-  --bg-hover: #F5F5F5;
-  --bg-subtle: #F5F4F0;
-  --bg-dark-card: #141414;
-  --bg-btn-solid: #141414;
-  --text-primary: #141414;
-  --text-secondary: #706E6A;
-  --text-inverse: #FFFFFF;
-  --text-btn-solid: #FFFFFF;
-  --border: #E5E2DA;
-  --accent: #9C8463;
-  --shadow-sm: 0 4px 12px rgba(0,0,0,0.04);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.06);
-  --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
-  --success: #16A34A;
-  --error: #DC2626;
-  --running: #2563EB;
-  --canvas-dot: #D1CEC5;
+  --bg-canvas: #181C22;
+  --bg-card: #242A33;
+  --bg-hover: #2D3543;
+  --bg-subtle: #1F242B;
+  --bg-dark-card: #0F1217;
+  --bg-btn-solid: #FFB020;
+  --text-primary: #E5E7EB;
+  --text-secondary: #9CA3AF;
+  --text-inverse: #181C22;
+  --text-btn-solid: #181C22;
+  --border: #374151;
+  --accent: #FFB020;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.2);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.3);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.4);
+  --success: #22C55E;
+  --error: #EF4444;
+  --warning: #F59E0B;
+  --running: #3B82F6;
+  --canvas-dot: #374151;
 }
 
 * {
