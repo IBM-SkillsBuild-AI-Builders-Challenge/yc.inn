@@ -98,7 +98,7 @@ export const useFlowStore = create((set, get) => ({
           ...connection,
           type: "smoothstep",
           animated: true,
-          markerEnd: { type: MarkerType.ArrowClosed, width: 20, height: 20, color: "#94a3b8" },
+          markerEnd: { type: MarkerType.ArrowClosed, width: 20, height: 20, color: "#b1ada1" },
         },
         get().edges
       ),
@@ -156,7 +156,7 @@ export const useFlowStore = create((set, get) => ({
           targetHandle: targetHandle || null,
           type: "smoothstep",
           animated: true,
-          markerEnd: { type: MarkerType.ArrowClosed, width: 20, height: 20, color: "#94a3b8" },
+          markerEnd: { type: MarkerType.ArrowClosed, width: 20, height: 20, color: "#b1ada1" },
         },
       ],
     });

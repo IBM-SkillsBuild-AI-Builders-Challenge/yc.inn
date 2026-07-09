@@ -8,38 +8,38 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cream: "#FBF9F4",
-        charcoal: "#141414",
-        taupe: "#706E6A",
-        bronze: "#9C8463",
-        border: "#E5E2DA",
-        input: "#E5E2DA",
-        ring: "#141414",
-        background: "#FBF9F4",
-        foreground: "#141414",
+        cream: "#f4f3ee",
+        charcoal: "#2c2c2c",
+        taupe: "#b1ada1",
+        bronze: "#c15f3c",
+        border: "#3d3d3d",
+        input: "#3d3d3d",
+        ring: "#c15f3c",
+        background: "#2c2c2c",
+        foreground: "#f4f3ee",
         primary: {
-          DEFAULT: "#141414",
-          foreground: "#FFFFFF",
+          DEFAULT: "#c15f3c",
+          foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#FFFFFF",
-          foreground: "#141414",
+          DEFAULT: "#2c2c2c",
+          foreground: "#f4f3ee",
         },
         destructive: {
           DEFAULT: "#DC2626",
-          foreground: "#FFFFFF",
+          foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#F0EDE6",
-          foreground: "#706E6A",
+          DEFAULT: "#3d3d3d",
+          foreground: "#b1ada1",
         },
         accent: {
-          DEFAULT: "#9C8463",
-          foreground: "#FFFFFF",
+          DEFAULT: "#c15f3c",
+          foreground: "#ffffff",
         },
         card: {
-          DEFAULT: "#FFFFFF",
-          foreground: "#141414",
+          DEFAULT: "#2c2c2c",
+          foreground: "#f4f3ee",
         },
       },
       borderRadius: {

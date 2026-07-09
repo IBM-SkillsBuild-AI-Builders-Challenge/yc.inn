@@ -1,26 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-canvas: #181C22;
-  --bg-card: #242A33;
-  --bg-hover: #2D3543;
-  --bg-subtle: #1F242B;
-  --bg-dark-card: #0F1217;
-  --bg-btn-solid: #FFB020;
-  --text-primary: #E5E7EB;
-  --text-secondary: #9CA3AF;
-  --text-inverse: #181C22;
-  --text-btn-solid: #181C22;
-  --border: #374151;
-  --accent: #FFB020;
-  --shadow-sm: 0 4px 12px rgba(0,0,0,0.2);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.3);
-  --shadow-lg: 0 16px 48px rgba(0,0,0,0.4);
+  --bg-canvas: #1a1a1a;
+  --bg-card: #2c2c2c;
+  --bg-hover: #3d3d3d;
+  --bg-subtle: #242424;
+  --bg-dark-card: #1a1a1a;
+  --text-primary: #f4f3ee;
+  --text-secondary: #b1ada1;
+  --text-btn-solid: #ffffff;
+  --border: #3d3d3d;
+  --accent: #c15f3c;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.5);
   --success: #22C55E;
   --error: #EF4444;
   --warning: #F59E0B;
-  --running: #3B82F6;
-  --canvas-dot: #374151;
+  --running: #c15f3c;
+  --canvas-dot: #555555;
 }
 
 * {
@@ -395,11 +393,11 @@ body {
 .dag-modal-actions button:hover { background: var(--bg-hover); }
 
 .dag-modal-actions .dag-btn-primary {
-  background: var(--bg-dark-card);
-  color: var(--bg-card);
-  border-color: var(--text-primary);
+  background: #c15f3c;
+  color: #ffffff;
+  border: none;
 }
-.dag-modal-actions .dag-btn-primary:hover { background: #2a2520; }
+.dag-modal-actions .dag-btn-primary:hover { background: #a84e2e; }
 
 /* ── Submit Button ── */
 .submit-btn {
@@ -407,21 +405,21 @@ body {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: var(--bg-btn-solid);
-  color: var(--text-btn-solid);
+  background: #c15f3c;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   font-size: 13px;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(193,95,60,0.25);
   transition: all 0.15s;
 }
-.submit-btn:hover { background: var(--bg-hover); color: var(--text-primary); box-shadow: 0 6px 20px rgba(0,0,0,0.16); }
+.submit-btn:hover { background: #a84e2e; box-shadow: 0 6px 20px rgba(193,95,60,0.35); }
 .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-.submit-btn.is-running { background: var(--running); }
-.submit-btn.is-running:hover { background: #1D4ED8; }
+.submit-btn.is-running { background: #b1ada1; color: #1a1a1a; }
+.submit-btn.is-running:hover { background: #9e9a8e; }
 .submit-btn svg { width: 16px; height: 16px; }
 
 @keyframes spin {
@@ -578,13 +576,13 @@ select.field-input option {
 .field-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .field-btn-primary {
-  background: var(--bg-btn-solid);
-  color: var(--text-btn-solid);
-  border-color: var(--bg-btn-solid);
+  background: #c15f3c;
+  color: #ffffff;
+  border: none;
   margin-top: 10px;
   padding: 9px 12px;
 }
-.field-btn-primary:hover { background: var(--bg-hover); border-color: var(--border); color: var(--text-primary); }
+.field-btn-primary:hover { background: #a84e2e; }
 
 /* ── Field Output ── */
 .field-output {
@@ -772,9 +770,9 @@ select.field-input option {
 }
 .method-btn:hover { background: var(--bg-card); color: var(--text-primary); }
 .method-btn.active {
-  background: var(--bg-dark-card);
-  color: var(--bg-card);
-  border-color: var(--text-primary);
+  background: #c15f3c;
+  color: #ffffff;
+  border-color: #c15f3c;
 }
 
 /* ── Channel Buttons ── */
@@ -801,9 +799,9 @@ select.field-input option {
 }
 .channel-btn:hover { background: var(--bg-card); color: var(--text-primary); }
 .channel-btn.active {
-  background: var(--bg-dark-card);
-  color: var(--bg-card);
-  border-color: var(--text-primary);
+  background: #c15f3c;
+  color: #ffffff;
+  border-color: #c15f3c;
 }
 
 /* ── Condition Labels ── */
@@ -923,10 +921,17 @@ select.field-input option {
 }
 .react-flow__handle:hover {
   transform: scale(1.4);
-  box-shadow: 0 0 0 2px rgba(26,26,26,0.12);
+  box-shadow: 0 0 0 2px rgba(193,95,60,0.3);
 }
-.handle-input { background: var(--text-secondary) !important; }
-.handle-output { background: var(--bg-dark-card) !important; }
+.handle-input { background: #64748b !important; }
+.handle-output { background: #64748b !important; }
+.handle-json { background: #ef4444 !important; border-color: #ef4444 !important; }
+.handle-table { background: #ec4899 !important; border-color: #ec4899 !important; }
+.handle-vector { background: #10b981 !important; border-color: #10b981 !important; }
+.handle-llm { background: #d946ef !important; border-color: #d946ef !important; }
+.handle-memory { background: #f97316 !important; border-color: #f97316 !important; }
+.handle-message { background: #6366f1 !important; border-color: #6366f1 !important; }
+.handle-tool { background: #06b6d4 !important; border-color: #06b6d4 !important; }
 
 .react-flow__edge-path {
   stroke-width: 2.5;
@@ -1071,17 +1076,17 @@ select.field-input option {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--bg-dark-card);
-  color: var(--text-inverse);
+  background: #c15f3c;
+  color: white;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 16px rgba(193,95,60,0.3);
   transition: all 0.15s;
 }
-.assistant-fab:hover { transform: translateY(-50%) scale(1.05); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+.assistant-fab:hover { transform: translateY(-50%) scale(1.05); background: #a84e2e; }
 
 .assistant-panel {
   position: absolute;
@@ -1173,7 +1178,7 @@ select.field-input option {
   color: var(--text-primary);
   max-width: 85%;
 }
-.assistant-msg.user .assistant-msg-content { background: var(--bg-dark-card); color: var(--text-inverse); }
+.assistant-msg.user .assistant-msg-content { background: #c15f3c; color: #ffffff; }
 .assistant-msg-content p { margin: 0; }
 .assistant-msg-content p + p { margin-top: 6px; }
 

@@ -84,7 +84,7 @@ export function LLMNode({ id, data }) {
       <div className="field">
         <label className="field-label">
           <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
-            <Key size={10} /> API Key <span style={{ fontWeight: 400, color: "#706E6A", textTransform: "none" }}>(optional)</span>
+            <Key size={10} /> API Key <span style={{ fontWeight: 400, color: "#b1ada1", textTransform: "none" }}>(optional)</span>
           </span>
         </label>
         <div style={{ position: "relative" }}>
@@ -99,7 +99,7 @@ export function LLMNode({ id, data }) {
           <button type="button" onClick={() => setShowKey(!showKey)}
             style={{
               position: "absolute", right: 6, top: "50%", transform: "translateY(-50%)",
-              background: "none", border: "none", cursor: "pointer", color: "#706E6A",
+              background: "none", border: "none", cursor: "pointer", color: "#b1ada1",
               display: "flex", padding: 2,
             }}
           >

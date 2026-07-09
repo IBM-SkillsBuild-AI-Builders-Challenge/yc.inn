@@ -22,6 +22,20 @@ function mapType(raw) {
     text: "text", llm: "llm", api: "api", apirequest: "api",
     condition: "condition", delay: "delay", database: "database", notification: "notification",
     filter: "condition", email: "notification",
+    workflowtrigger: "workflowTrigger", trigger: "workflowTrigger",
+    sensorinput: "sensorInput", sensor: "sensorInput",
+    csvupload: "csvUpload",
+    datacleaning: "dataCleaning", cleaning: "dataCleaning",
+    featureextraction: "featureExtraction", feature: "featureExtraction",
+    anomalydetection: "anomalyDetection", anomaly: "anomalyDetection",
+    failureprediction: "failurePrediction", prediction: "failurePrediction",
+    decision: "condition",
+    humanapproval: "humanApproval", approval: "humanApproval",
+    maintenanceticket: "maintenanceTicket", ticket: "maintenanceTicket",
+    inventorycheck: "inventoryCheck", inventory: "inventoryCheck",
+    maintenanceexpert: "maintenanceExpert",
+    procurementagent: "procurementAgent", procurement: "procurementAgent",
+    rootcauseagent: "rootCauseAgent", rootcause: "rootCauseAgent",
   };
   return map[key] || null;
 }
@@ -29,11 +43,24 @@ function mapType(raw) {
 const HANDLE_OUTPUT = {
   customInput: "value", text: "output", llm: "response",
   api: "response", condition: "true", delay: "output", database: "result",
+  workflowTrigger: "trigger", sensorInput: "data", csvUpload: "data",
+  dataCleaning: "output", featureExtraction: "features",
+  anomalyDetection: "anomaly", failurePrediction: "prediction",
+  decision: "true", humanApproval: "approved",
+  maintenanceTicket: "ticket", inventoryCheck: "result",
+  notification: "input", maintenanceExpert: "advice",
+  procurementAgent: "order", rootCauseAgent: "diagnosis",
 };
 
 const HANDLE_INPUT = {
   customOutput: "value", llm: "prompt",
   api: "input", condition: "input", delay: "input", database: "input", notification: "input",
+  sensorInput: "trigger", csvUpload: "trigger",
+  dataCleaning: "input", featureExtraction: "input",
+  anomalyDetection: "input", failurePrediction: "input",
+  decision: "input", humanApproval: "input",
+  maintenanceTicket: "input", inventoryCheck: "input",
+  maintenanceExpert: "input", procurementAgent: "input", rootCauseAgent: "input",
 };
 
 function parseWorkflowJson(content) {

@@ -74,7 +74,7 @@ export function FlowCanvas() {
   const styledEdges = edges.map((e) => {
     const status = edgeStatuses[e.id];
     if (!status) return e;
-    const edgeColor = status === "running" ? "#2563EB" : status === "success" ? "#16A34A" : "#DC2626";
+    const edgeColor = status === "running" ? "#c15f3c" : status === "success" ? "#16A34A" : "#DC2626";
     return {
       ...e,
       className: `exec-${status}`,
@@ -123,14 +123,14 @@ export function FlowCanvas() {
         panOnScroll
         zoomOnDoubleClick={false}
       >
-        <Background variant={BackgroundVariant.Dots} gap={20} size={1} color="#D1CEC5" />
+        <Background variant={BackgroundVariant.Dots} gap={24} size={1.5} color="#555555" />
         <Controls showInteractive={false} position="top-right" />
         <MiniMap
           style={minimapStyle}
-          nodeColor="#E5E2DA"
-          nodeStrokeColor="#D1CEC5"
+          nodeColor="#2c2c2c"
+          nodeStrokeColor="#555555"
           nodeBorderRadius={8}
-          maskColor="rgba(251,249,244,0.7)"
+          maskColor="rgba(26,26,26,0.8)"
         />
       </ReactFlow>
       {contextMenu && (

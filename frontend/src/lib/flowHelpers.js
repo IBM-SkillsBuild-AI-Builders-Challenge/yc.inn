@@ -5,19 +5,19 @@ export const defaultEdgeOptions = {
   animated: true,
   style: {
     strokeWidth: 2.5,
-    stroke: "#706E6A",
+    stroke: "#b1ada1",
   },
   markerEnd: {
     type: MarkerType.ArrowClosed,
     width: 24,
     height: 24,
-    color: "#706E6A",
+    color: "#b1ada1",
   },
 };
 
 export const connectionLineStyle = {
   strokeWidth: 2.5,
-  stroke: "#141414",
+  stroke: "#c15f3c",
 };
 
 export const snapGrid = [20, 20];
